@@ -1,0 +1,122 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$m2-primary: (
+    50 : #f0f4e4,
+    100 : #dae3bc,
+    200 : #c2d08f,
+    300 : #a9bd62,
+    400 : #96ae41,
+    500 : #84a01f,
+    600 : #7c981b,
+    700 : #718e17,
+    800 : #678412,
+    900 : #54730a,
+    A100 : #f7ffb3,
+    A200 : #f2ff80,
+    A400 : #edff4d,
+    A700 : #eaff33,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$m2-accent: (
+    50 : #e7edec,
+    100 : #c4d1cf,
+    200 : #9db3af,
+    300 : #75948e,
+    400 : #587d76,
+    500 : #3a665e,
+    600 : #345e56,
+    700 : #2d534c,
+    800 : #254942,
+    900 : #183831,
+    A100 : #96ffce,
+    A200 : #63ffb6,
+    A400 : #30ff9e,
+    A700 : #17ff92,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+
+$m2-error: (
+    50 : #f7e4e4,
+    100 : #eababa,
+    200 : #dd8d8d,
+    300 : #cf5f5f,
+    400 : #c43c3c,
+    500 : #ba1a1a,
+    600 : #b31717,
+    700 : #ab1313,
+    800 : #a30f0f,
+    900 : #940808,
+    A100 : #ffd5dd,
+    A200 : #ffa2b4,
+    A400 : #ff6f8a,
+    A700 : #ff5576,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$journel-theme: mat.m2-define-light-theme((
+  color: (
+    primary: mat.m2-define-palette($m2-primary, 500),
+    accent: mat.m2-define-palette($m2-accent, 500),
+    warn: mat.m2-define-palette($m2-error, 300),
+    button: (
+      // Customize button background and text color
+      flat: (background: mat.m2-get-color-from-palette($m2-primary, 500), color: mat.m2-get-color-from-palette($m2-primary, 50)),
+    )
+  ),
+  typography: mat.m2-define-typography-config()
+));
+
+:root {
+  @include mat.all-component-themes($journel-theme);
+}

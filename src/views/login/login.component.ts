@@ -1,5 +1,5 @@
 import { NgIf } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { 
   FormControl, 
   FormGroup, 
@@ -14,6 +14,7 @@ import {
   MatTab, 
   MatTabGroup 
 } from '@angular/material/tabs';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -34,6 +35,8 @@ import {
 })
 export class LoginComponent {
 
+  router = inject(Router);
+
   hidePassword = true;
   hideSignupPassword = true;
 
@@ -48,12 +51,8 @@ export class LoginComponent {
     password: new FormControl(''),
   })
 
-  togglePasswordVisibility() {
-
-  }
-
   onLoginSubmit() {
-    
+    this.router.navigate(['/home']);
   }
 
   onSignupSubmit() {

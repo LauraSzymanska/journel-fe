@@ -1,0 +1,30 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav 
+    #sidenav
+    mode="side" 
+    opened
+    >
+        <mat-nav-list class="m-2">
+            <a 
+                class="mat-item"
+                mat-list-item 
+                routerLink="home" 
+                routerLinkActive="active">
+                    <mat-icon class="nav-icon">home</mat-icon>
+                    <span class="with-icon">Home</span>
+            </a>
+            <a 
+                class="mat-item"
+                mat-list-item
+                routerLink="journal"
+                routerLinkActive="active">
+                    <mat-icon class="nav-icon">bookmark</mat-icon>
+                    <span class="with-icon">Journals</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content style="overflow: hidden">
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- <router-outlet></router-outlet> -->

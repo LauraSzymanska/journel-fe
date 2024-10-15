@@ -1,0 +1,12 @@
+<mat-toolbar color="accent">
+  <span>Journel</span>
+    <button class="avatar-button" at-icon-button [matMenuTriggerFor]="menu" aria-label="User menu">
+      <img src="/assets/avatar.png" alt="Avatar" class="avatar">
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Profile</button>
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+</mat-toolbar>

@@ -2,9 +2,9 @@
 @use '@angular/material' as mat;
 
 mat-sidenav-container {
- height: 92%;
+  height: 92%;
 }
-  
+
 mat-sidenav {
   width: 250px;
   background-color: #eee;
@@ -45,6 +45,6 @@ a.active {
   color: #f7f7f7;
 
   &:hover {
-    background-color: mat.m2-get-color-from-palette($m2-accent, 600); 
+    background-color: mat.m2-get-color-from-palette($m2-accent, 600);
   }
 }

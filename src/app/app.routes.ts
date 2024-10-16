@@ -4,25 +4,23 @@ import { HomepageComponent } from '../views/homepage/homepage.component';
 import { ShellComponent } from '../views/base/shell/shell.component';
 
 export const routes: Routes = [
-    {
+  {
+    path: '',
+    component: ShellComponent,
+    children: [
+      {
         path: '',
-        component: ShellComponent,
-        children: 
-        [
-            {
-                path: '',
-                redirectTo: 'home',
-                pathMatch: 'full',
-            },
-            {
-                path: 'home',
-                component: HomepageComponent
-            },
-        ]
-    },
-    {
-        path: 'login',
-        component: LoginComponent
-    },
-
+        redirectTo: 'home',
+        pathMatch: 'full',
+      },
+      {
+        path: 'home',
+        component: HomepageComponent,
+      },
+    ],
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
 ];

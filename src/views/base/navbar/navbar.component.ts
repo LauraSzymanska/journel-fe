@@ -6,15 +6,8 @@ import { RouterModule, RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [
-    MatToolbarModule, 
-    MatMenuModule,
-    RouterOutlet,
-    RouterModule
-  ],
+  imports: [MatToolbarModule, MatMenuModule, RouterOutlet, RouterModule],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {
-
-}
+export class NavbarComponent {}

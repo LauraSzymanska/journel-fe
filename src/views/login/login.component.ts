@@ -24,7 +24,7 @@ import { Router } from '@angular/router';
     NgIf,
   ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.css',
+  styleUrl: './login.component.scss',
 })
 export class LoginComponent {
   router = inject(Router);

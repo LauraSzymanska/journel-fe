@@ -43,7 +43,7 @@
 
     <mat-tab label="Sign up">
       <mat-card-content>
-        <form [formGroup]="signupForm" (ngSubmt)="(onSignupSubmit)">
+        <form [formGroup]="signupForm" (ngSubmit)="(onSignupSubmit)">
           <mat-form-field appearance="outline">
             <mat-label>Login</mat-label>
             <input type="text" matInput formControlName="login" required />

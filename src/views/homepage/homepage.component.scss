@@ -1,0 +1,68 @@
+@use '../../custom-theme' as *;
+@use '@angular/material' as mat;
+
+:host {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+}
+
+.left-panel {
+  width: auto;
+  aspect-ratio: 176 / 250;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.journal-cover {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: url("https://i.imgur.com/0kjMcUe.png");
+  filter: brightness(0.95) sepia(20%) saturate(80%);
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.title-box {
+  text-align: center;
+  width: 80%;
+  font-size: 2.5rem;
+  margin-top: 10%;
+  padding: 10px;
+  color: #63451d;
+  font-family: "Style Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0.3px 0.3px 1px #886740;
+}
+
+.note {
+  font-size: 1rem;
+  margin-top: 10px;
+  padding: 10px;
+  letter-spacing: 0.5px;
+  line-height: 1.8rem;
+  color: #1c1201;
+  font-family: "Libre Caslon Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 0.2px 0.2px 0.5px #886740;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+}
+
